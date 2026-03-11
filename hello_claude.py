@@ -1,0 +1,11 @@
+import anthropic
+from dotenv import load_dotenv
+load_dotenv()
+
+client = anthropic.Anthropic()
+message = client.messages.create(
+    model='claude-sonnet-4-6',
+    max_tokens=256,
+    messages=[{'role': 'user', 'content': 'Hello! What can you do?'}]
+)
+print(message.content[0].text)
