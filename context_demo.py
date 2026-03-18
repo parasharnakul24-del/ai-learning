@@ -13,8 +13,15 @@ message = client.messages.create(
     max_tokens=300,
     messages=[{
         "role": "user",
-        "content": f"Here is a product description:\n\n{product_info}\n\nIn 3 bullet points, what are the top selling points of this product?"
+        "content": (
+            "<request>\n"
+            "  <instruction>In 3 bullet points, what are the top selling points of this product?</instruction>\n"
+            "  <productText>\n"
+            f"{product_info}"
+            "  </productText>\n"
+            "</request>"
+        )
     }]
 )
 
-print(message.content[0].text)
+print(message.content[0].text)git add context_demo.py xml_test.py
