@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Parse an AWS S3 object key to extract the bucket name, folder path, and file name from a full S3 URI like 's3://my-bucket/folder/subfolder/file.txt'",
+    "format": "regex"
+  },
+  {
+    "task": "Create a JSON CloudFormation template snippet that defines an AWS Lambda function resource with basic properties including function name, runtime, and IAM role ARN",
+    "format": "json"
+  },
+  {
+    "task": "Write a Python function that takes an AWS CloudWatch log timestamp in milliseconds since epoch and converts it to a human-readable ISO 8601 format string",
+    "format": "python"
+  }
+]
